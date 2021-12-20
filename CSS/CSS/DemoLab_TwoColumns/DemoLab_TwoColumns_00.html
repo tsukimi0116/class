@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width">
+<style type="text/css">
+	body{
+		background-color: rgb(185, 190, 235);
+	}
+
+	.wrapper{
+		width: 800px;
+		margin: auto;
+		background-color: white;
+	}
+
+	.header{
+		height: 150px;
+	}
+
+	.mainContent{
+		float: left;
+		width: 500px;
+		height: 300px;
+	}
+
+	.sidebar{
+		float: left;
+		width: 280px;
+		height: 300px;
+		border-top: 1px solid gray;
+		padding: 0px 10px;
+	}
+
+	.footer{
+		clear: both;
+		height: 100px;
+	}
+
+	.article{
+		padding: 0px 20px;
+		border: 1px solid gray;
+		border-radius: 15px;
+		margin-bottom: 10px;
+		background-color: rgb(252, 244, 239);
+	}
+
+	.article h2{
+		color: rgba(141, 57, 43, 0.61);
+		margin-top: 10px;
+		height: 1.2em;
+		border-bottom: 2px solid rgba(141, 58, 43, 0.925);
+	}
+
+	@media screen and (max-width: 790px) {
+		.wrapper{
+			width: 100%;
+		}
+		.mainContent{
+			width: 100%;
+		}
+		.sidebar{
+			width: 100%;
+			height: auto;
+			margin: 20px 0px;
+		}
+			
+	}
+  
+</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">Header</div>
+	<div class="mainContent">
+		<div class="article">
+		<h2>Heading 1</h2>
+		<p>article2 content. article2 content. article2 content. article2 content. article2 content.</p>
+		</div>
+		<div class="article">
+		<h2>Heading 2</h2>
+		<p>article2 content. article2 content. article2 content. article2 content. article2 content.</p>
+		</div>
+	</div>
+	<div class="sidebar">a side bar.</div>
+	<div class="footer">footer area</div>
+</div>
+</body>
+</html>

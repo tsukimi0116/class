@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+  
+    <script>
+        var time = new Date;
+        if(time.getHours>8 && time.getHours<11){
+            alert("上午課程");
+        }else if(time.getHours==12){
+            alert("中午用餐時間");
+        }else if(time.getHours>13 && time.getHours<16){
+            alert("下午課程");
+        }else{
+            alert("非上課時間");
+        }
+
+
+
+        // 1. 取得系統現在時間(HH)
+        // 2. 如果是 8點 ~ 11點，顯示上午課程
+        // 3. 如果是 12點，顯示中午用餐時間
+        // 4. 如果是 13點 ~ 16點，顯示下午課程
+        // 5. 其他的時段，顯示非課程時間
+        // 6. 透過三元運算子，判斷現在是 'AM' 還是 'PM'
+    </script>
+    
+</body>
+
+</html>

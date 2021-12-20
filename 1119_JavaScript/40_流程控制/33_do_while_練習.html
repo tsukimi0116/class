@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <button onclick="userDrink()">開始統計飲料金額</button>
+    <p id="money"></p>
+    <script>
+        var item = [] ;
+        var total = 0
+        function userDrink() {
+        do{
+            var x = prompt("請輸入飲料金額")
+            item [item.length] = x
+            total += parseInt(x)
+            console.log(item); 
+            console.log(total); 
+        }while(x!=0)
+        item.pop();
+        document.getElementById('money').innerText=`${item.join("+")}總金額為:${total}元`;
+        }
+
+        //元素 [元素.length] > 把東西加進陣列裡
+        //將陣列裡的東西顯示出來 > 陣列元素.join('陣列值中間的符號')
+        
+        // * 使用 do.. while 完成底下練習
+
+        // 10. 設計網頁上應該要有的元素
+
+        // 20. 透過 prompt 讓使用者輸入金額
+
+        // 30. 若使用者輸入 0 表示不再輸入
+        //     畫面顯示 全部輸入過的金額 和 總金額
+    </script>
+
+</body>
+</html>

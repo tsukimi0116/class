@@ -1,0 +1,1 @@
+document.getElementById("demo").innerText="皮卡丘99";

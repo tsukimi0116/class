@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript String Methods</h4>
+    <p><a href="http://www.w3schools.com/js/js_string_methods.asp">http://www.w3schools.com/js/js_string_methods.asp</a></p>
+
+    <script>
+
+        // // 1. 字串的長度
+        // var str = "Practice makes perfect";
+        // var a = str.length ;
+        // console.log(a);
+
+        // // 2. 字串.indexOf() 回傳了什麼?
+        // var b = str.indexOf('r');
+        // console.log(b);
+
+        // // 3. 找到字串中最後一次出現的 e 的函式是什麼? str.latsIndexof()
+        // var c = str.lastIndexOf('e')
+        // console.log(c);
+
+
+        // // 4. 字串.split() 把字串分割為陣列
+        // var fruits = "apple,bubble,lemon";
+        // console.log(fruits.split(','));
+
+        // // 5. 字串往左補零
+        // var demo = "13756"
+        // var z = demo.padStart(10,'0')
+        // console.log(z);
+
+        // 6. 擷取底下字串
+        // 0911222333 是 手機
+        // 0423456789 是 電話號碼
+        var phones = "09112223330423456789";
+        console.log(phones.substr(0,10));
+        console.log(phones.substr(10,phones.length));
+
+
+        // // 7. 比較 substr()、substring()、slice()
+        // console.group("(0, 2)");
+        // var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        // console.log(`str.substr(0,2)：${str.substr(0, 2)}`);
+        // console.log(`str.substring(0,2)：${str.substring(0, 2)}`);
+        // console.log(`str.slice(0,2)：${str.slice(0, 2)}`);
+        // console.groupEnd();
+
+
+        // console.group("(3, 5)");
+        // console.log(`str.substr(3,5)：${str.substr(3, 5)}`);
+        // console.log(`str.substring(3,5)：${str.substring(3, 5)}`);
+        // console.log(`str.slice(3,5)： ${str.slice(3, 5)}`);
+        // console.groupEnd();
+
+        // console.group("(5, 3)");
+        // console.log(`str.substr(5,3)：${str.substr(5, 3)}`);
+        // console.log(`str.substring(5,3)：${str.substring(5, 3)}`);
+        // console.log(`str.slice(5,3)：${str.slice(5, 3)}`);
+        // console.groupEnd();
+
+        // console.group("(3)");
+        // console.log(`str.substr(3)：${str.substr(3)}`);
+        // console.log(`str.substring(3)：${str.substring(3)}`);
+        // console.log(`str.slice(3)： ${str.slice(3)}`);
+        // console.groupEnd();
+
+        // console.group("(-5)");
+        // console.log(`str.substr(-5)： ${str.substr(-5)}`);
+        // console.log(`str.substring(-5)：${str.substring(-5)}`);
+        // console.log(`str.slice(-5)：${str.slice(-5)}`);
+        // console.groupEnd();
+
+    </script>
+</body>
+
+</html>

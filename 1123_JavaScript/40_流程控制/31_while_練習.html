@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    
+    <script>
+
+        // 10. 計算從1加到10數值為多少
+        var x = 0
+        var y = 0
+        while(x<10){
+            x++
+            y=x+y
+            console.log(y);
+        }
+
+        // 20. 網頁必須輸入通關密碼1234才會停止
+        var userInput = prompt("輸入通關密碼")
+
+        while (userInput!=1234){
+            var userInput = prompt("輸入通關密碼");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <button onclick="sum()">開始</button>
+    <p id="demo"></p>
+    
+    <script>
+        function sum() {
+            var item = [];
+            var tot = 0;
+
+            do {
+                var userInput = prompt("金額");
+                item[item.length] = userInput;
+                tot += parseInt(userInput);
+            } while (userInput != 0)
+
+            // 移除最後一個 0
+            item.pop();
+            document.getElementById('demo').innerText = ` ${item.join("+")} 總金額===> ${tot}`;
+        }
+    </script>
+
+</body>
+
+</html>

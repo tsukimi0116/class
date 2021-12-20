@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+    <button onclick="userClick()">點擊輸入飲料金額:</button>
+    <p id ="result"></p>
+    
+
+    <script>
+        function userClick(){
+            var money = [] ;
+            var tot = 0 ;
+            do{
+                var keyIn = prompt("請輸入飲料金額")
+                money[money.length] = keyIn;
+                tot += parseInt(keyIn);
+                console.log(money);
+                console.log(tot);
+
+            }while(keyIn!=0){
+                money.pop();
+                console.log(money);
+                document.getElementById('result').innerText=`${money.join("+")}總金額為:${tot}元` ;
+            }
+        }
+        // * 使用 do.. while 完成底下練習
+
+        
+
+        // 10. 設計網頁上應該要有的元素
+
+        // 20. 透過 prompt 讓使用者輸入金額
+
+        // 30. 若使用者輸入 0 表示不再輸入
+        //     畫面顯示 全部輸入過的金額 和 總金額
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <input type="text" id="useInputX">
+    /
+    <input type="text" id="useInputY">
+    <button onclick="xyMath()">Click</button>
+    <!-- 10. 請在畫面加入兩個input元素 -->
+
+    <!-- 20. 請在畫面加入一顆按鈕 -->
+
+    <!-- 30. 點選按鈕後，計算元素輸入的內容值相除的值還有餘數 -->
+    <script>
+        function xyMath(){
+            var x = parseInt(document.getElementById('useInputX').value);
+            //console.log(x);
+            var y = parseInt(document.getElementById('useInputY').value);
+            //console.log(y);
+            var ans = x / y ;
+            //console.log(x/y);
+            var modulo = x % y ;
+            //console.log(x%y);
+            alert(`${Math.floor(ans)}餘${modulo}`)
+            //記得無條件捨去是Math.floor
+            //parseInt是字串轉數字
+        }
+    </script>
+
+</body>
+
+</html>

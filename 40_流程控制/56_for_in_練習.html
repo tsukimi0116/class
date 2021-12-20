@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+
+        // // 10. 使用 for in，逐一尋覽物件裡面的屬性
+        // var s1 = {
+        //     html: 100,
+        //     css: 90,
+        //     js: 80
+        // }
+
+        // console.log(s1.html);
+        // var item = 'html';
+        // console.log(s1[item]);
+
+        // for(var item in s1){
+        //     console.log(s1[item]);
+        // }
+
+        // 20. 使用 for in，只會尋覽有值的資料出來
+        let x = [10, 20, 30];
+        x[5] = 999;
+
+        // // 方法A
+        // for (var i = 0; i < x.length; i++) {
+        //     console.log(x[i]);
+        // }
+
+                
+        // // 方法B
+        // for (var item of x) {
+        //     console.log(item);
+        // }
+
+        for(var apple in x){
+            console.log(x[apple]);
+        }
+
+    </script>
+</body>
+
+</html>

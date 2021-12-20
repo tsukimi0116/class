@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+   <p>請輸入頻道代碼:</p>
+    <input type="text" id="channel">
+    <button onclick="search()">search</button>
+    <p id="demo"></p>
+    <!-- 10. 請設計一個介面，讓使用者輸入頻道代碼後，網頁可以顯示對應的頻道名稱 -->
+
+    <script>
+        function search(){
+        
+            var userChannel = parseInt(document.getElementById('channel').value);
+            var result ="";
+
+            switch(userChannel) {
+                case 20:
+                    result="TLC 旅遊生活頻道";
+                    break;
+                case 65:
+                    result="HBO";
+                    break;
+                case 66:
+                    result="東森洋片台";
+                    break;
+        }   
+        document.getElementById('demo').innerText = result;
+        }
+
+        //switch裡擺變數 直接擺alert之類的不會動
+        //外面擺行為(32行)
+        //switch一定要型態相同，是嚴格比較，沒有相同會沒辦法運行，所以抓資料用parseInt
+        
+        // 20. 透過 switch case 設定底下對應項目
+        //     20 ==> TLC 旅遊生活頻道
+        //     65 ==> HBO
+        //     66 ==> 東森洋片台
+        //     非上述 ==> 頻道尚未建立
+
+    </script>
+</body>
+
+</html>

@@ -11,7 +11,7 @@
             echo '<tr>';
             echo "<td>{$fname}</td>";
             echo '<td>' . filesize($fname) . 'byte </td>';
-            echo '<td>' . filemtime($fname) . '</td>';
+            echo '<td>' . date('Y-m-d H:i:s',filemtime($fname)) . '</td>';
             echo '</tr>';
         }
 

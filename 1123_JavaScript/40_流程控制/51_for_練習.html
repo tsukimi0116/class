@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!-- 顯示效果的地方 -->
+    <p id="pSquare"></p>
+    <p id="pTriangle"></p>
+    <pre id="pTimes"></pre>
+
+    <script>
+        // 10. 使用 for 迴圈，列印出這個月份從1號到目前系統日
+
+        // 20. 使用 for 迴圈，逐一取得陣列裡面的元素
+        // var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+        // var i = 0;
+
+        // for(i;i<=6;i++){
+        //     console.log(weekList[i]);
+        // }
+
+
+
+
+        // 30. 使用 for 迴圈，計算從 1 加到 10
+        // var i = 1;
+        // var z = 0;
+
+        // for (i; i <= 10; i++) {
+        //     z+=i;
+        //     console.log(z);
+        // }
+
+
+        // 40. 雙層迴圈 - 長方型星星 #pSquare
+
+        // var z = '';
+        // for (var k = 1; k <= 6; k++) {
+        //     for (var i = 1; i <= 4; i++) {
+        //         z += '*';
+        //     }
+        //     z += '<br>';
+        // }
+        // document.getElementById('pSquare').innerHTML = z;
+
+
+        // ****
+        // **** 
+        // **** 
+        // **** 
+        // **** 
+        // ****
+
+
+        // var z = '';
+        // for (var k = 1; k <= 4; k++) {
+        //     for (var i = 1; i <= k; i++) {
+        //         z += '*';
+        //     }
+        //     z += '<br>';
+        // }
+        // document.getElementById('pSquare').innerHTML = z;
+
+
+        // 50. 雙層迴圈 - 三角形 #pTriangle
+        // * 
+        // ** 
+        // *** 
+        // **** 
+
+        // 60. 列印九九乘法表 (tab為 "&#9;") + <pre> 標籤 #pTimes
+
+        var z = '';
+        for (var k = 1; k < 10; k++) {
+            for (var i = 2; i < 10; i++) {
+                //2*1=2
+                z += i + '*' + k + '=' + (i * k) + "&#9;"
+            }
+            z += '<br>';
+        }
+        document.getElementById('pTimes').innerHTML = z;
+    </script>
+</body>
+
+</html>

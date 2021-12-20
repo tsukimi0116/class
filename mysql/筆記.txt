@@ -1,0 +1,57 @@
+Select c.Companyname, count(o.OrderID) nums
+From Orders o join Customers c ON
+    (o.CustomerID = c.CustomerID)
+Where o.OrderDate >= '1997-01-01'
+Group by c.Companyname
+Having Conut(o.OrderID) >= 10
+Order by nums DESC
+;
+
+哪些公司他的實際銷售額超過10000美金?
+
+Select Companyname,ProductID, UnitPrice*Quantity* (1-discount) tp
+From OrderDetails od 
+    Join Orders o ON (o.OrderID = od.OrderID)
+    Join Customers c on (c.CustomerID = o.CustomerID)
+Where UnitPrice*Quantity* (1-discount) >= 10000
+
+----------------------------------------------------
+Select Companyname,ProductID, UnitPrice*Quantity* (1-discount) tp
+From OrderDetails od ,Order o , Customers c
+    Where o.OrderID = od.OrderID
+    And c.CustomerID = o.CustomerID
+    And UnitPrice*Quantity* (1-discount) >= 10000
+
+___________________________________________________________
+Select Max(UnitPrice) from OrderDetails Where ProductID = 47;
+___________________________________________________________
+員工銷售排行榜:
+select e.employeeid , e.lastname ,SUM(Unitprice*quantity)totle
+from Orders o 
+    join OrderDetails od on (o.OrderID = od.OrderID)
+    join Employees e on (o.Employeeid = e.Employeeid)
+    Group by e.employeeid
+    Order by totle DESC
+    ;
+驗算:
+SELECT e.EmployeeID, e.LastName, SUM(od.UnitPrice * od.Quantity) tp
+FROM Employees e
+    JOIN Orders o ON (o.EmployeeID = e.EmployeeID)
+    JOIN OrderDetails od ON (od.OrderID = o.OrderID)
+WHERE e.EmployeeID = 4;
+
+商品總表的供應商資料
+select p.Productname ,s.supplierID ,s.Contactname, s.Phone
+From products p ,suppliers s 
+WHERE p.supplierID = s.supplierID
+;
+//不要忘記打哪裡的資料 44行 不然會跳1052
+
+select p.Productname ,s.supplierID ,s.Contactname, s.Phone
+From products p
+join suppliers s Using(supplierID)
+//同樣做法改用JOIN
+//Using(supplierID) =  
+//on = (p.supplierID = s.supplierID)
+
+Create view

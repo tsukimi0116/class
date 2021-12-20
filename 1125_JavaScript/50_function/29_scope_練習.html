@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var x = 999 ;
+        console.log(x);
+        // 1. 在這裡宣告一個變數 x 設定初始值 為 999
+        // 2. 透過 console.log(x); 觀察 x 為?
+    </script>
+</head>
+
+<body>
+
+    <!-- 3. 在這裡增加一顆按鈕，
+            設定 onclick="getX()"  -->
+            <button onclick="getX()">getX</button>
+
+    <!-- 5. 在這裡增加兩顆按鈕，並各自設定
+            onclick="setYZ()" 和 onclick="getYZ()" -->
+            <button onclick="setYZ()">setYZ</button>
+            <button onclick="getYZ()">getYZ</button>
+
+
+    <script>
+        // 4. 宣告 function getX()，裡面"宣告"一個變數 x 設定初始值 為 1，並log下來
+        function getX(){
+            var x= 1;
+            console.log(`4-1--->${x}`);
+            console.log(`4-2--->${window.x}`);
+            //window = 外面的變數x
+
+        }
+
+        //      4-1. 至瀏覽器觀察，log(x) 的紀錄是什麼?
+                //變成1
+
+        //      4-2. 如果需要取用到 步驟 1 的 x，要怎麼取得?
+
+
+
+        // 6. 宣告 function setYZ() 
+        //      6-1. "不使用" var 關鍵字，宣告一個變數 y，給予初始值 2 並log出來查看
+
+        function setYZ(){
+            y = 2;
+            var z = 3;
+            console.log(y);
+            console.log(z);
+        }
+        //      6-2. "使用" var 宣告變數z，並給予初始值 3 且log出來查看
+        
+        
+        // 7. function getYZ() 將變數 y 和 變數 z log出來查看
+        function getYZ(){
+            
+            console.log(z);
+        }
+    </script>
+
+</body>
+
+</html>

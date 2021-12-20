@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        img{
+            top: 500px;
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <img id="demo" src="../../_image/find.png">
+
+    <!-- 10. 畫面上設定一張圖片 -->
+   
+    <script>
+
+        var elm = document.getElementById("demo");
+    
+        // 20. 透過 元素.style.top 取得 樣式 top 值，用這個方法會抓不到東西
+        var a = elm.style.top;
+        // 30. 透過 window.getComputedStyle(元素).getPropertyValue(樣式屬性));
+        var b = window.getComputedStyle(elm).getPropertyValue('height');
+        // 40. 觀察上述兩者差異
+        console.log(`a:${a}`);
+        console.log(`b:${b}`);
+
+    </script>
+</body>
+
+</html>

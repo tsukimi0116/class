@@ -1,0 +1,19 @@
+<button id=btn>接收輸入，並顯示結果</button>
+    <script>
+        btn.onclick = function () {
+            var x = prompt("請輸入x:");
+            var y = prompt("請輸入y:")
+            x = Number(x);
+            y = Number(y)
+            if(isNaN(x) || isNaN(y)){
+                alert("請輸入數字");
+            }else{
+            alert(`x+y=${x + y}`);
+        }
+        }
+    </script>
+
+數字判別式
+
+
+location.href=''/url'' setTimeout呼叫網頁

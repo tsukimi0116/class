@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    
+    <h4>指定的秒數，做指定的事情</h4>
+    <p><a href="https://www.w3schools.com/jsref/met_win_setinterval.asp">https://www.w3schools.com/jsref/met_win_setinterval.asp</a></p>
+
+    <script>
+        var cnt = 0;
+
+        function add() {
+            cnt += 1;
+            console.log(` add() ==>  ${cnt} `);
+        }
+
+
+        // 10. 放入  add
+        
+        // 20. 放入 'add()'
+        
+        // 30. 放入  add()
+        
+        // 40. 呼叫 setInterval 時改為直接放入 function 
+        setInterval(function add() {
+            cnt += 1;
+            console.log(` add() ==>  ${cnt} `);
+        }
+        ,1000);
+
+        //使用setInterval呼叫函式時需將function(){}整組搬過來，否則只有funtion()他只會呼叫一次就暫停
+
+    </script>
+</body>
+
+</html>

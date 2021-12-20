@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        function sale() {
+            var price = prompt("請輸入價格");
+            var quan = prompt("請輸入數量");
+            var tot = quan * price;
+            if (quan > 10 && quan < 20) {
+                tot = tot * 0.95;
+                console.log(tot);
+            } else if (quan >= 20) {
+                tot = tot * 0.9;
+                console.log(tot);
+            } else {
+                tot = tot * 1;
+                console.log(tot);
+            }
+        }
+        sale();
+
+
+
+        // 小練習：設計一個function，傳入數量和單價
+        //        數量10杯以上總金額打95折，20杯以上打9折
+
+
+    </script>
+</body>
+
+</html>
