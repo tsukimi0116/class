@@ -8,20 +8,36 @@
 
 <body>
 
-    <p>請點選登入</p>
+    <p id="ptext">請點選登入</p>
     <button id="btnLogin">登入</button>
 
     <script>
-
-        btnLogin.onclick = function () {
-            
-            // 10. 取得 p 元素的內容
-
-            // 20. 設定 p 元素的內容
-
-            // 30. $().text() 和 $().html() 的差異
-
+        
+        function mytest(s){
+            if (s == null){
+                return document.getElementById('ptext').innerText
+            }else
+            document.getElementById('ptext').innerText = s
         }
+        console.log(mytest());
+        mytest('C8763');
+                
+        
+        // btnLogin.onclick = function myText() {
+
+        //     10. 取得 p 元素的內容
+        //     var temp = $('p').text();
+        //     console.log(temp);
+
+        //     // 20. 設定 p 元素的內容
+        //     $('p').text('Brad');
+
+        //     30. $().text() 和 $().html() 的差異(可否顯示標籤)
+        //     var temp = $('p').html();
+        //     console.log(temp);
+        //     return document.getElementById('ptext').innerText;
+        // }
+        
     </script>
 
 </body>

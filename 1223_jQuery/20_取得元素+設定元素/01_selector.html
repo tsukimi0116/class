@@ -32,18 +32,28 @@
         <li>其他</li>
     </ul>
 
+    <input type="password">
+
     <script>
         // 10. 挑選 h4 元素
+        console.log($('h4').length);
 
         // 20. 透過 #ulist 選擇 ul 標籤
-
+        console.log($('#ulist').length);
+        
         // 30. 挑選 li 標籤
-
+        console.log($('li').length);
+        
         // 40. 挑選第一個出現的 li 
-
+        console.log($('li:first').text());
+        
         // 50. 挑選各別元素中第一個出現的 li
-
+        console.log($('li:first-child').text());
+        
         // 60. jQuery 函式庫是否有針對 <input> 提供特殊的選擇方式？
+        $(':password').fadeOut("slow");
+        
+        
     </script>
 
 </body>
