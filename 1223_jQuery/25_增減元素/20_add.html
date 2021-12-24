@@ -13,7 +13,7 @@
     <div>
         <h4>底下是清單</h4>
         <ol>
-            <li>LINE Pay</li>
+            <li class="linep">LINE Pay</li>
             <li>Apple Pay</li>
             <li>信用卡</li>
         </ol>
@@ -25,10 +25,15 @@
             
           // 10. 測試 + 比較底下幾種方法的差異:
           //    $().before()
+                $('.linep').before('<li>C8763</li>');
           //    $().after()
+                $('.linep').after('<li>日蝕</li>')
           //    $().prepend() 
+                $('ol').prepend('<li>我在最上面</li>')
+                $('ol').append('<li>我在最下面</li>')
           //    $().append()
           //    $().appendTo()
+                $('<li>我才在最下面幹</li>').appendTo('ol');
             
         }
     </script>

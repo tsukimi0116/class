@@ -15,7 +15,9 @@
     <p><a href="https://api.jquery.com/jquery.each/">https://api.jquery.com/jquery.each/</a></p>
 
     <h4>$ vs $()</h4>
-    <p><a href="https://learn.jquery.com/using-jquery-core/dollar-object-vs-function/">https://learn.jquery.com/using-jquery-core/dollar-object-vs-function/</a></p>
+    <p><a
+            href="https://learn.jquery.com/using-jquery-core/dollar-object-vs-function/">https://learn.jquery.com/using-jquery-core/dollar-object-vs-function/</a>
+    </p>
     <hr>
 
     <h3>apple</h3>
@@ -27,11 +29,20 @@
         $(function () {
 
             // 20. $().each(): 逐項取得所有 h3 元素 裡面的文字
-
+            $('h3').each(function (index, elm) {
+                // alert($(this).text());
+                // $(elm).css('font-style','italic');
+                this.innerHTML = '<i>' + this.innerText + '</i>';
+                // $(this).html(`<i>${ $(this).text() }</i>`)
+            })
             // 21. 將所有 h3 元素的文字改為斜體
 
             // 30. $.each(): 讀出陣列裡面的項目
             var list = ['dog', 'egg'];
+            $.each(list,function(index,item){
+                console.log(index);
+                console.log(item);
+            })
 
         })
     </script>

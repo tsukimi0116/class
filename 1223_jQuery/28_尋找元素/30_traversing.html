@@ -37,6 +37,18 @@
     <div id="demo"></div>
 
     <script>
+        btnPickItem.onclick = function(){
+            var temp = [];
+        
+            $('li').filter('.grape').each(function(ind,elm){
+                temp.push(elm.innerText);
+            })
+
+            demo.innerHTML = temp.join('<br>');
+        }
+
+        
+
       
         // * 比較底下幾種 尋找|篩選 元素的方式 *
 

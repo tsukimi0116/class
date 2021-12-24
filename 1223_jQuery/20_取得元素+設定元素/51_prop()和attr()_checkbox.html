@@ -8,12 +8,18 @@
 
 <body>
 
-    <input type="checkbox">
-    
+    <input id="ch1" type="checkbox" checked>
+    <input id="ch2" type="checkbox">
+
+
     <script>
 
         // 10. 透過 prop() 和 attr() 
         //     取得 <input type="checkbox"> 元素 的 checked 屬性
+        console.log($('#ch1').prop('checked'));
+        console.log($('#ch1').attr('checked'));
+        console.log($('#ch2').prop('checked'));
+        console.log($('#ch2').attr('checked'));
 
     </script>
 
