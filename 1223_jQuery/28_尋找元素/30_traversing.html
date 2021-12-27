@@ -39,11 +39,16 @@
     <script>
         btnPickItem.onclick = function(){
             var temp = [];
-        
-            $('li').filter('.grape').each(function(ind,elm){
+            //21. :contains ===> $(selector:contains(text))
+            //22. :has ===>$(selector:has(selector))
+
+            //30. :has()不是css規範中的一部分
+            
+            //40.
+            $('li').has('b').each(function(idx,elm){
                 temp.push(elm.innerText);
             })
-
+        
             demo.innerHTML = temp.join('<br>');
         }
 
@@ -51,15 +56,64 @@
 
       
         // * 比較底下幾種 尋找|篩選 元素的方式 *
+        //10.11往裡面找
+        //12.13往上找
 
         // 10. filter   ===> $().filter()
-        // 11. find     ===> $().find()
-        // 12. children ===> $().children()
-        // 13. parent   ===> $().parent()
-        // 14. closest  ===> $().closest()
+        // $('li').filter('.grape').each(function(ind,elm){
+        //         temp.push(elm.innerText);
+        //     })
+
+        //     demo.innerHTML = temp.join('<br>');
+
+        //想要獲得巨峰葡萄跟大湖草莓
+                      //a.
+                      // if(idx == 0 || idx == 4){
+                      //     return true;
+                      // }else{
+                      //     return false;
+                      // }
+                      //b.簡短版 
+                      //return idx == 0 || idx == 4
+                      //c.有意外,甘王草莓也會進來
+                      //return idx == 0 || elm.innerText.indexOf('草莓')>-1;
         
-        // 15. eq       ===> $().eq()
-        // 16. contents ===> $().contents()
+        
+        // 11. find     ===> $().find() 可以找到深層
+        // $('ul').find('b').each(function(idx,elm){
+        //         temp.push(elm.innerText);
+        //     })
+
+        
+        // 12. children ===> $().children() 只能找到一層
+        // $('ul').children('li').each(function(idx,elm){
+        //         temp.push(elm.innerText);
+        //     })
+
+
+        // 13. parent   ===> $().parent()  找爸媽
+        // $('.grape').parent().each(function(idx,elm){
+        //         temp.push(elm.tagName); 直接印出標籤名稱 不用innerText
+        //     })
+
+
+        // 14. closest  ===> $().closest() 找最近的
+        // $('.grape').closest('ul').each(function(idx,elm){
+        //         temp.push(elm.innerText);
+        //     })
+        
+        // 15. eq       ===> $().eq() 給index數字
+        // $('li').eq(0)
+        //     .each(function(idx,elm){
+        //         temp.push(elm.innerText);
+        //     })
+ 
+        
+        // 16. contents ===> $().contents() 會把擇行也弄進來 要用for in迴圈把東西挑出來
+        // $('div').contents()
+        //     .each(function(idx,elm){
+        //         temp.push(elm.innerText);
+        //     })
 
         // 21. :contains ===> $(selector:contains(text))
         // 22. :has()    ===> $(selector:has(selector))
