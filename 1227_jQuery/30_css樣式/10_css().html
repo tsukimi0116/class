@@ -9,29 +9,38 @@
 
 <body>
 
-    <h4>.css()</h4>
+    <h3>.css()</h3>
     <p><a href='https://api.jquery.com/css/'>https://api.jquery.com/css/</a></p>
 
     <hr>
-    
-    <p id="p1">Apple</p>
-    <p id="p2">Bee</p>
-    <p id="p3">Cat</p>
-    <p id="p4">Dog</p>
-    <p id="p5">Egg</p>
+    <h4 id="aabbcc">Apple</h4>
+    <h4 id="aabbcc">Bee</h4>
+    <h4 id="aabbcc">Cat</h4>
+    <h4 id="aabbcc">Dog</h4>
+    <h4 id="aabbcc">Egg</h4>
 
     <script>
+        // 10. 取得 #p1 標籤的文字顏色
         $(function () {
+        //     var temp = $('#p1').css('color');
+        //     console.log(temp);
+        
+        
+        // 20. 設定 #p1 標籤的文字顏色
+        // $('#p1').css('color','red');   
             
-            // 10. 取得 #p1 標籤的文字顏色
-            // 20. 設定 #p1 標籤的文字顏色
-           
-            // 30. 取得 h4 標籤的 id 
-            // 40. 設定 h4 標籤的 id 
-            //      * 和 $().css() 無關，複習 + 討論先前曾使用過的 function
+        // 30. 取得 h4 標籤的 id 
+        // 40. 設定 h4 標籤的 id 
+        // var temp = $('h4:first').prop('id','aabbcc');
+        var temp = $('h4').eq(0);
+        console.log(temp);
+            
+        //      * 和 $().css() 無關，複習 + 討論先前曾使用過的 function
 
-            // 50. $().css() 其他型態的參數
-            //  * 15_練習_點選改變字型大小.html 練習後回來補充說明
+            
+        // 50. $().css() 其他型態的參數
+            
+        //  * 15_練習_點選改變字型大小.html 練習後回來補充說明
             
         })
     </script>

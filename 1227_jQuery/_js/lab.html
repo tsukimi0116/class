@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 陣列[] 物件{} 迴圈 for() 函式|副程式func()
+    1.陣列裡面放物件
+    2.設計一個func接收購物車
+    3.func 裡面有迴圈
+    4.計算金額 -->
+
+<body>
+
+    <script>
+        var pxmart = [{
+            pid: 1,
+            pname: 'apple',
+            pprice: 100,
+            pdiscount: 'Y'
+        }, {
+            pid: 2,
+            pname: 'milk',
+            pprice: 200,
+            pdiscount: 'N'
+        }]
+
+        function getSuumary(item,func) {
+            //先給存錢筒對的狀態空字串給'',數字給0;
+            var tot = 0; //不能拿undefined去跟obj.pprice += 會是NAN
+            for (var obj of item) {
+                // console.log('--我是水平線--');
+                // // console.log(obj.pprice)//['pprice']或.pprice都可以呼叫金額;
+                // if (obj.pdiscount == 'Y')
+                //     tot += obj.pprice * 0.8;
+                // else {
+                //     tot += obj.pprice;
+                tot += func(obj.pdiscount, obj.pprice)
+            }
+            return tot;
+        }
+        
+
+        var temp = getSuumary(pxmart, function (mytype, price) {
+            if (mytype == 'Y') {
+                return price * 0.8;
+            } else {
+                return price;
+            }
+
+        })
+        console.log(temp);
+    </script>
+
+
+</body>
+
+</html>
