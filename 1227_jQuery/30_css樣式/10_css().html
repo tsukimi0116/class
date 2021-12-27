@@ -13,11 +13,11 @@
     <p><a href='https://api.jquery.com/css/'>https://api.jquery.com/css/</a></p>
 
     <hr>
-    <h4 id="aabbcc">Apple</h4>
-    <h4 id="aabbcc">Bee</h4>
-    <h4 id="aabbcc">Cat</h4>
-    <h4 id="aabbcc">Dog</h4>
-    <h4 id="aabbcc">Egg</h4>
+    <p id="p1">Apple</p>
+    <p id="p2">Bee</p>
+    <p id="p3">Cat</p>
+    <p id="p4">Dog</p>
+    <p id="p5">Egg</p>
 
     <script>
         // 10. 取得 #p1 標籤的文字顏色
@@ -36,12 +36,30 @@
         console.log(temp);
             
         //      * 和 $().css() 無關，複習 + 討論先前曾使用過的 function
-
+        // $('#p2').prop('style','color:red');
+        // $('#p2').prop('style','font-size:40px')//後蓋前只會放大 
+        // $('#p3').css('color','yellow')   
+        // $('#p3').css('font-size','40px')   
+        
+        // $('#p1').css('color','aqua').css('font-size','40px');//如果是回傳jQuery物件可以在.繼續加
             
+        // $('#p4').css({
+        //     // color:'red',
+        //     // fontSize:'40px'  兩種寫法，一種是js寫法，一種是css
+        //     'color':'red',
+        //     'font-size':'40px'
+        // })
         // 50. $().css() 其他型態的參數
             
         //  * 15_練習_點選改變字型大小.html 練習後回來補充說明
-            
+        
+
+        $('p').css('width',function(idx,val){
+            return '200px'; //要做的事太多可以用func去包
+            // return `${idx*50}px`; 可以做累進階梯
+        })
+
+
         })
     </script>
 
