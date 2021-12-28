@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/30_cssstyle.css">
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <button id="btnDemo">測試</button>
+    <h1>Hi</h1>
+    
+    
+    
+    <script>
+        btnDemo.onclick = function(){
+            $('h1').toggleClass('bgColor');
+            //有或沒有重複做可以用toggleclass
+            
+            
+            
+            // var temp = $('h1').prop('class');
+            // if(temp == "bgColor"){
+            //     $('h1').removeClass('bgColor');
+            // }else{
+            //     $('h1').addClass('bgColor')
+            // }
+        }
+
+    </script>        
+    
+</body>
+
+</html>

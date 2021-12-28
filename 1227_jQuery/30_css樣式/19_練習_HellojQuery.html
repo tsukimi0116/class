@@ -4,19 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <script src="../_js/jquery-3.6.0.js"></script>
+    <style>
+        body {
+            background-color: hsl(11, 80%, 70%);
+        }
+
+        #zero {
+            position: fixed;
+            width: 100vmax;
+            height: 100vmax;
+        }
+
+        #one {
+            position: relative;
+            font-size: 96px;
+            height: 150px;
+            width: 400px;
+            color: hsl(11, 80%, 70%);
+            background-color: hsl(191, 80%, 70%);
+            ;
+            text-align: center;
+            line-height: 150px;
+            margin: auto;
+            margin-top: 200px;
+            user-select: none;
+        }
+
+        #two {
+            position: relative;
+            font-size: 96px;
+            color: hsl(191, 80%, 70%);
+            height: 200px;
+            text-align: center;
+            line-height: 150px;
+            margin: auto;
+            margin-top: 0;
+            user-select: none;
+        }
+
+        #three {
+            position: relative;
+            margin: auto;
+            font-size: 24px;
+            text-align: center;
+            margin: auto;
+            color: hsl(191, 80%, 70%);
+            background-color: white;
+        }
+    </style>
 </head>
 
+
 <body>
-    
+
+    <div id="zero"></div>
     <p>底下是顏色設定範例:</p>
-    <span style="color: hsl(0, 100%, 50%);">Apple</span>
-    <span style="color: hsl(180, 100%, 50%);">Bee</span>
+
+    <div id="one"><p>Hello</p></div>
+    <div id="two"><span>jQuery</span></div>
+
+    <div id="three"><span id="sp1" style="color: hsl(11, 80%, 70%);">hsl(11,80%,70%)</span> <span="sp2">hsl(191,80%,70%)</span=></div>
+
 
     <script>
+
+
+        $(document).ready(function () {
+            function rgb(a, b = 0) {
+                return Math.floor(Math.random() * a + b)
+            }
+
+
+            zero.onclick = function () {
+                var col1 = rgb(361);
+                var col2 = Math.abs((col1+180)%360); 
+                var text1 = `hsl(${col1},80%,70%)`
+                console.log([col1,col2]);
+                $('#one').css('background-color', `hsl(${col1},80%,70%)`);
+                $('#one').css('color', `hsl(${col2},80%,70%)`);
+
+                $('body').css('background-color', `hsl(${col2},80%,70%)`);
+                $('#two').css('color', `hsl(${col1},80%,70%)`);
+
+                $('#three').css('color', `hsl(${col1},80%,70%)`);
+                $('#three>span').eq(0).text(`hsl(${col2},80%,70%)`).css('color',`hsl(${col2},80%,70%)`);
+                $('#three>span').eq(1).css('color',`hsl(${col1},80%,70%)`);
+
+            }
+
+        })
+
+
 
         // * 模仿 Hello Color 
         //   https://jxnblk.github.io/hello-color/?c=f7da2d
         //   做出一個隨機產生 對比色|互補色 的網頁
+
 
     </script>
 

@@ -10,6 +10,7 @@
 <body>
 
     <section>
+        <button id="btnDemo">測試</button>
         <button id="btn1">div,p</button>
         <button id="btn2">div>p</button>
         <button id="btn3">div+p</button>
@@ -17,7 +18,7 @@
         <button id="btn5">div p</button>
 
         <p>p-0</p>
-        <div>
+        <div >
             div-1
             <div>
                 div-2
@@ -38,12 +39,35 @@
 
     <script>
         // 試試看 addClass、removeClass，以及各種選擇器
-
+        // btnDemo.onclick = function(){
+        //     var temp = $('div').prop('class').split(' ').length;
+        //     console.log(temp);
+        // }
         // 10. div,p
+        btn1.onclick = function(){
+            $('div,p').removeClass('bgColor')
+            $('div,p').addClass('bgColor')
+        }
         // 20. div>p
+        btn2.onclick = function(){
+            $('div>p').removeClass('bgColor')
+            $('div>p').addClass('bgColor')
+        }
         // 30. div+p
+        btn3.onclick = function(){
+            $('div+p').removeClass('bgColor')
+            $('div+p').addClass('bgColor')
+        }
         // 40. div~p
+        btn4.onclick = function(){
+            $('div~p').removeClass('bgColor')
+            $('div~p').addClass('bgColor')
+        }
         // 50. div p
+        btn5.onclick = function(){
+            $('div p').removeClass('bgColor')
+            $('div p').addClass('bgColor')
+        }
     </script>
 </body>
 
