@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+<body>
+
+    <ul id="dd">
+        <li id="item1">Apple</li>
+        <li id="item2">Bee</li>
+        <li id="item3">Cat</li>
+        <li id="item4">Dog</li>
+        <li id="item5">Egg</li>
+    </ul>
+    
+    <script>
+
+        // $('ul').fadeOut('slow');
+        $('li[id!="item1"]').hide().each(function(idx,elm){
+            $(elm).fadeIn(1000 * (idx+1));
+        })
+        
+   
+    
+    </script>
+</body>
+</html>

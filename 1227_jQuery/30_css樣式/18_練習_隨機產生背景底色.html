@@ -4,27 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <script src="../_js/jquery-3.6.0.js"></script>
-   
+
 </head>
 
 <body>
-    
+
+
+
+
     <script>
 
         // 10. 用 JavaScript 改變body背景底色
         // document.body.style.backgroundColor='darkgrey';
-        
+
         // 20. 用 jQuery 改變body背景底色
-        // $('body').css('background-color','aqua')
-        
-        
+        // $('body').css('background-color','rgb(0, 0, 0)')
+
+
         // 30. 隨機產生背景底色
-        var temp = $('body').css('background-color','red')
-        console.log(temp['background-color']);
+
         // 40. 點選按鈕產生背景底色
-        
+        // $('body').prepend('<button id="bgc">點我換顏色</button>')
+        // bgc.onclick = function () {
+        //     var r = Math.floor(Math.random() * 255)
+        //     var g = Math.floor(Math.random() * 255)
+        //     var b = Math.floor(Math.random() * 255)
+        //     $('body').css('background-color', `rgb(${r},${g},${b})`)
+        // }
         // 50. 加入 setInterval 讓畫面每秒更新上述設定
-        
+        $(document).ready(function () {
+            function getrandom(a, b = 0) {
+                return Math.floor(Math.random() * a + b)
+            }
+            setInterval(function () {
+
+                var r = getrandom(256)
+                var g = getrandom(256)
+                var b = getrandom(256)
+                
+                $('body').html(`<img src="../30_css樣式/img/${getrandom(9,1)}.png"> <h1>我是誰</h1>`)
+                
+                $('body').css('background-color', `rgb(${r},${g},${b})`)
+            }, 1000)
+        })
+
+
     </script>
 </body>
 
