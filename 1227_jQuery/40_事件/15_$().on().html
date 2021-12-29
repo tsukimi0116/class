@@ -36,8 +36,8 @@
     <input type="checkbox" id="ch1">
     <label for="ch1">測試測試</label>
     
-    <label id="ch2">
-        <input type="checkbox">是我啦
+    <label id="bee">
+        <input id="ch2" type="checkbox">是我啦
     </label>
 
 
@@ -80,8 +80,13 @@
         $('#ch1').on('click',function(){
             console.log("hi");
         })
-        $('#ch2').on('click',function(){
+
+        $('#bee').on('click',function(e){
             console.log("hihi");
+        })
+
+        $('#ch2').on('click',function(e){
+            e.stopPropagation();
         })
 
 

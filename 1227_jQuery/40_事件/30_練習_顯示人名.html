@@ -6,19 +6,61 @@
     <script src="../_js/jquery-3.6.0.js"></script>
 
     <!-- 10. 參考結果設定對應 css -->
-
+    <style>
+        div {
+            float: left;
+        }
+    </style>
 </head>
 
 <body>
-   
+
     <!-- 20. 設定袋子，裡面裝一張圖片和一段文字 -->
-   
+    <div>
+        <img src="../30_css樣式/img/0.png" style="height: 150px; width: 150px;">
+        <p>小火龍</p>
+    </div>
+    <div>
+        <img src="../30_css樣式/img/1.png" style="height: 150px; width: 150px;">
+        <p>傑尼龜</p>
+    </div>
+    <div>
+        <img src="../30_css樣式/img/2.png" style="height: 150px; width: 150px;">
+        <p>皮卡丘</p>
+    </div>
+    <div>
+        <img src="../30_css樣式/img/3.png" style="height: 150px; width: 150px;">
+        <p>妙蛙種子</p>
+    </div>
+    <div>
+        <img src="../30_css樣式/img/4.png" style="height: 150px; width: 150px;">
+        <p>小火猴</p>
+    </div>
+
+    <br>
+
+
+
     <script>
         $(function () {
-            
+            $('p').hide();
+
+
+
+
+
             // 30. 設定先將文字隱藏起來
             //      滑鼠經過div的時候顯示，離開的時候隱藏
             //    * mouseenter 和 mouseleave
+            for (let i = 0; i <= 4; i++) {
+                $('img').eq(i).on('mouseenter', function () {
+                    $('p').eq(i).show();
+                })
+                $('img').eq(i).on('mouseleave', function () {
+                    $('p').eq(i).hide();
+                })
+            }
+
 
         });
 

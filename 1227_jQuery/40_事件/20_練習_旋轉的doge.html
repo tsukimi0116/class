@@ -4,17 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <script src="../_js/jquery-3.6.0.js"></script>
+    <style>
+
+    </style>
 </head>
 
 <body>
 
     <script>
-        $(function () {
+
+
+        $(document).ready(function () {
+
+            var deg = 0;
+            var flag = 0;
+            $('#dog').on({
+                //用另一種方式寫
+            })
+            // 
+            // $('#doge').on('mouseenter', function () {
+            //     flag = setInterval(function () {//flag用來接收setInterval的值
+            //         deg += 1;
+            //         $('#doge').css('transform', `rotateZ(${deg}deg)`)
+            //     }, 10)
+            // })
+            // $('#doge').on('mouseleave', function () {
+            //     clearInterval(flag);
+            // })
+
+        })
+
 
             // 10. 參考執行結果，條列所需的 樣式以及事件
             //      * 旋轉圖片css: transform:rotateZ(90deg)
 
-        });
+            //把圖片生出來ok
+            //滑鼠經過的時候會再css樣式新增旋轉
+            //離開的時候停住
+
     </script>
 </body>
 
