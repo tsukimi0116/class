@@ -8,16 +8,36 @@
 
 <body>
 
-    <input type="checkbox" > All
-    <input type="checkbox" > Apple
-    <input type="checkbox" > Bee
-    <input type="checkbox" > Cat
+    <input id="all" type="checkbox" > All
+    <input id="apple" type="checkbox" name="demo"> Apple
+    <input id="bee" type="checkbox" name="demo"> Bee
+    <input id="cat" type="checkbox" name="demo"> Cat
 
 </body>
-    <script>
+<script>
 
-        // 10. 當 All 被勾選的時候，其餘 checkbox 也會被勾選起來
-        //   * 還有其他未列出的勾選連動，請一併考慮
+    // 10. 當 All 被勾選的時候，其餘 checkbox 也會被勾選起來
+    //   * 還有其他未列出的勾選連動，請一併考慮
+    
 
-    </script>
+
+    $(document).ready(function () {
+
+        $('input').change(function () {
+        
+            console.log(this.name);
+
+            $(`input[name='${this.id}']`).prop('checked', this.checked)
+
+            $(`input[id='${this.name}']`).prop('checked',
+                $(`input[name='${this.name}']`).length ==
+                $(`input[name='${this.name}']:checked`).length)
+        })
+
+
+
+    })
+
+</script>
+
 </html>
